@@ -281,6 +281,15 @@
                                         <a href="a_pemesanan.html" class="nav-link" data-key="t-calendar"> Pengadaan/Pemesanan </a>
                                     </li>
                                     <li class="nav-item">
+                                        <a href="a_rekap_distributor.html" class="nav-link" data-key="t-calendar"> Lap. Pemesanan </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="a_rekap_terima_distributor.html" class="nav-link" data-key="t-calendar"> Lap. Progres Pemesanan [Perbulan] </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="a_rekap_penerimaan_bmhp.html" class="nav-link" data-key="t-calendar"> Lap. Progres Pemesanan [Pertanggal] </a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a href="#" class="nav-link" data-key="t-chat"> Mutasi </a>
                                     </li>
                                     <li class="nav-item">
@@ -299,19 +308,19 @@
                             <div class="collapse menu-dropdown" id="sidebarLayouts">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="a_terima.html" target="_blank" class="nav-link" data-key="t-horizontal">Dari Pemesan</a>
+                                        <a href="a_terima.html" class="nav-link" data-key="t-horizontal">Dari Pemesan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" target="_blank" class="nav-link" data-key="t-detached">Dropping / Hibah</a>
+                                        <a href="a_terima_dropping.html" class="nav-link" data-key="t-detached">Dropping / Hibah</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" target="_blank" class="nav-link" data-key="t-two-column">Kedaluarsa</a>
+                                        <a href="a_terima_kedaluarsa.html" class="nav-link" data-key="t-two-column">Kedaluwarsa</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" target="_blank" class="nav-link" data-key="t-hovered">Retur</a>
+                                        <a href="a_terima_retur.html" class="nav-link" data-key="t-hovered">Retur</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" target="_blank" class="nav-link" data-key="t-hovered">...</a>
+                                        <a href="#" class="nav-link" data-key="t-hovered">...</a>
                                     </li>
                                 </ul>
                             </div>
@@ -371,7 +380,6 @@
                                                         <i class="ri-printer-fill me-2"></i> Print <i class=" ri-arrow-down-s-line"></i>
                                                     </button>
                                                     <div class="dropdown-menu dropdown-menu-end">
-                                                        <a class="dropdown-item d-block d-lg-none user-profile-show" href="#"><i class="ri-user-2-fill align-bottom text-muted me-2"></i> View Profile</a>
                                                         <a class="dropdown-item" href="#"><i class="ri-file-excel-line align-bottom text-muted me-2"></i> Export</a>
                                                         <a class="dropdown-item" href="#"><i class="ri-printer-line align-bottom text-muted me-2"></i> Print</a>
                                                         <a class="dropdown-item" href="#"><i class="ri-file-word-line align-bottom text-muted me-2"></i> Surat Pesanan</a>
@@ -552,7 +560,7 @@
                                                                     <table class="table table-nowrap align-middle">
                                                                         <tbody class="form-check-all">
                                                                             
-                                                                            <tr>
+                                                                            <tr data-bs-toggle="modal" id="create-btn" data-bs-target="#modalObats">
                                                                                 <th scope="row">
                                                                                     <div class="form-check">
                                                                                         <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
@@ -623,93 +631,175 @@
     </div>
     <!-- END layout-wrapper -->
 
-    <div class="modal fade" id="showModal" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header bg-light p-3">
-                <h5 class="modal-title">Pengadaan Baru</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close" id="close-modal"></button>
-            </div>
-            <form class="tablelist-form" autocomplete="off">
-                <div class="modal-body">
-                    <input type="hidden" id="id-field" />
-                    <form action="">
-                        <div class="row mb-3">
-                            <div class="col-lg-3">
-                                <label for="obat" class="form-label">Obat</label>
-                            </div>
-                            <div class="col-lg-9">
-                                <input type="url" class="form-control" id="obat" placeholder="">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-3">
-                                <label for="satns" class="form-label">Satuan Kecil</label>
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="satns" placeholder="">
-                                    <span class="input-group-text" id="basic-satns">Pcs</span>
+    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light p-3">
+                    <h5 class="modal-title">Pengadaan Baru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close" id="close-modal"></button>
+                </div>
+                <form class="tablelist-form" autocomplete="off">
+                    <div class="modal-body">
+                        <input type="hidden" id="id-field" />
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="obat" class="form-label">Obat</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="url" class="form-control" id="obat" placeholder="">
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <label for="dateInput" class="form-label">Tipe Penerimaan</label>
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="anil_nepal">
-                                    <label class="switch switch-left-right">
-                                      <input class="switch-input" type="checkbox">
-                                      <span class="switch-label" data-on="Dengan Ongkir" data-off="Tanpa Ongkir"></span> <span class="switch-handle"></span> </label>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-3">
-                                <label for="timeInput" class="form-label">Harga Satuan</label>
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-satn">Rp</span>
-                                    <input type="text" class="form-control" placeholder="" aria-describedby="basic-satn">
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="satns" class="form-label">Satuan Kecil</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="satns" placeholder="">
+                                        <span class="input-group-text" id="basic-satns">Pcs</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-3">
-                                <label for="satns" class="form-label">Kemasan</label>
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="satns" placeholder="">
-                                    <span class="input-group-text" id="basic-satns">Pcs</span>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label for="dateInput" class="form-label">Tipe Penerimaan</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="anil_nepal">
+                                        <label class="switch switch-left-right">
+                                        <input class="switch-input" type="checkbox">
+                                        <span class="switch-label" data-on="Dengan Ongkir" data-off="Tanpa Ongkir"></span> <span class="switch-handle"></span> </label>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-lg-3">
-                                <label for="pabrik" class="form-label">Pabrik</label>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="timeInput" class="form-label">Harga Satuan</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-satn">Rp</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-satn">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-9">
-                                <input type="email" class="form-control" id="pabrik" placeholder="">
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="satns" class="form-label">Kemasan</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="satns" placeholder="">
+                                        <span class="input-group-text" id="basic-satns">Pcs</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="pabrik" class="form-label">Pabrik</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="email" class="form-control" id="pabrik" placeholder="">
+                                </div>
+                            </div>
+                        </form>
 
-                </div>
-                <div class="modal-footer">
-                    <div class="hstack gap-2 justify-content-end">
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-danger" id="add-btn">Simpan</button>
                     </div>
-                </div>
-            </form>
+                    <div class="modal-footer">
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-warning" id="add-btn">Simpan</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+
+    <div class="modal fade" id="modalObats" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light p-3">
+                    <div>
+                        <button type="submit" class="btn btn-success" id="add-btn"><i class="ri-save-fill me-2"></i> Simpan</button>
+                        <button type="submit" class="btn btn-warning" id="add-btn"><i class="ri-delete-bin-2-fill me-2"></i> Hapus</button>
+                        <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal"><i class="ri-close-fill me-2"></i> Tutup</button>
+                    </div>
+                </div>
+                <form class="tablelist-form" autocomplete="off">
+                    <div class="modal-body">
+                        <input type="hidden" id="id-field" />
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="obat" class="form-label">Obat</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="url" class="form-control" id="obat" placeholder="">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="satns" class="form-label">Satuan Kecil</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="satns" placeholder="">
+                                        <span class="input-group-text" id="basic-satns">Pcs</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label for="dateInput" class="form-label">Tipe Penerimaan</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="anil_nepal">
+                                        <label class="switch switch-left-right">
+                                        <input class="switch-input" type="checkbox">
+                                        <span class="switch-label" data-on="Dengan Ongkir" data-off="Tanpa Ongkir"></span> <span class="switch-handle"></span> </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="timeInput" class="form-label">Harga Satuan</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-satn">Rp</span>
+                                        <input type="text" class="form-control" placeholder="" aria-describedby="basic-satn">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="satns" class="form-label">Kemasan</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="satns" placeholder="">
+                                        <span class="input-group-text" id="basic-satns">Pcs</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-lg-3">
+                                    <label for="pabrik" class="form-label">Pabrik</label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <input type="email" class="form-control" id="pabrik" placeholder="">
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 

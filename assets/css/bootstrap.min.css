@@ -3758,36 +3758,36 @@ fieldset:disabled .btn {
 
 .btn-warning {
     --vz-btn-color: #fff;
-    --vz-btn-bg: #f7b84b;
-    --vz-btn-border-color: #f7b84b;
+    --vz-btn-bg: #FC8A15;
+    --vz-btn-border-color: #FC8A15;
     --vz-btn-hover-color: #fff;
-    --vz-btn-hover-bg: #d29c40;
-    --vz-btn-hover-border-color: #c6933c;
+    --vz-btn-hover-bg: #FFA33E;
+    --vz-btn-hover-border-color: #FFA33E;
     --vz-btn-focus-shadow-rgb: 248, 195, 102;
     --vz-btn-active-color: #fff;
-    --vz-btn-active-bg: #c6933c;
-    --vz-btn-active-border-color: #b98a38;
+    --vz-btn-active-bg: #FFA33E;
+    --vz-btn-active-border-color: #FFA33E;
     --vz-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --vz-btn-disabled-color: #fff;
-    --vz-btn-disabled-bg: #f7b84b;
-    --vz-btn-disabled-border-color: #f7b84b
+    --vz-btn-disabled-bg: #FC8A15;
+    --vz-btn-disabled-border-color: #FC8A15
 }
 
 .btn-danger {
     --vz-btn-color: #fff;
-    --vz-btn-bg: #fa896b;
-    --vz-btn-border-color: #fa896b;
+    --vz-btn-bg: #FF1F5A;
+    --vz-btn-border-color: #FF1F5A;
     --vz-btn-hover-color: #fff;
-    --vz-btn-hover-bg: #d5745b;
-    --vz-btn-hover-border-color: #c86e56;
+    --vz-btn-hover-bg: #FA4659;
+    --vz-btn-hover-border-color: #FA4659;
     --vz-btn-focus-shadow-rgb: 251, 155, 129;
     --vz-btn-active-color: #fff;
-    --vz-btn-active-bg: #c86e56;
-    --vz-btn-active-border-color: #bc6750;
+    --vz-btn-active-bg: #FA4659;
+    --vz-btn-active-border-color: #FA4659;
     --vz-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --vz-btn-disabled-color: #fff;
-    --vz-btn-disabled-bg: #fa896b;
-    --vz-btn-disabled-border-color: #fa896b
+    --vz-btn-disabled-bg: #FF1F5A;
+    --vz-btn-disabled-border-color: #FF1F5A
 }
 
 .btn-light {
@@ -3893,36 +3893,36 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-warning {
-    --vz-btn-color: #f7b84b;
-    --vz-btn-border-color: #f7b84b;
+    --vz-btn-color: #FC8A15;
+    --vz-btn-border-color: #FC8A15;
     --vz-btn-hover-color: #fff;
-    --vz-btn-hover-bg: #f7b84b;
-    --vz-btn-hover-border-color: #f7b84b;
+    --vz-btn-hover-bg: #FC8A15;
+    --vz-btn-hover-border-color: #FC8A15;
     --vz-btn-focus-shadow-rgb: 247, 184, 75;
     --vz-btn-active-color: #fff;
-    --vz-btn-active-bg: #f7b84b;
-    --vz-btn-active-border-color: #f7b84b;
+    --vz-btn-active-bg: #FC8A15;
+    --vz-btn-active-border-color: #FC8A15;
     --vz-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --vz-btn-disabled-color: #f7b84b;
+    --vz-btn-disabled-color: #FC8A15;
     --vz-btn-disabled-bg: transparent;
-    --vz-btn-disabled-border-color: #f7b84b;
+    --vz-btn-disabled-border-color: #FC8A15;
     --vz-gradient: none
 }
 
 .btn-outline-danger {
-    --vz-btn-color: #fa896b;
-    --vz-btn-border-color: #fa896b;
+    --vz-btn-color: #FF1F5A;
+    --vz-btn-border-color: #FF1F5A;
     --vz-btn-hover-color: #fff;
-    --vz-btn-hover-bg: #fa896b;
-    --vz-btn-hover-border-color: #fa896b;
+    --vz-btn-hover-bg: #FF1F5A;
+    --vz-btn-hover-border-color: #FF1F5A;
     --vz-btn-focus-shadow-rgb: 250, 137, 107;
     --vz-btn-active-color: #fff;
-    --vz-btn-active-bg: #fa896b;
-    --vz-btn-active-border-color: #fa896b;
+    --vz-btn-active-bg: #FF1F5A;
+    --vz-btn-active-border-color: #FF1F5A;
     --vz-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --vz-btn-disabled-color: #fa896b;
+    --vz-btn-disabled-color: #FF1F5A;
     --vz-btn-disabled-bg: transparent;
-    --vz-btn-disabled-border-color: #fa896b;
+    --vz-btn-disabled-border-color: #FF1F5A;
     --vz-gradient: none
 }
 

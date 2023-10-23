@@ -368,7 +368,7 @@
                                 <div class="card-header border-0">
                                     <div class="row align-items-center gy-3">
                                         <div class="col-sm">
-                                            <h5 class="card-title mb-0">Detail Penerimaan</h5>
+                                            <h5 class="card-title mb-0">Detail Dropping / Non PBF</h5>
                                         </div>
                                         <div class="col-sm-auto">
                                             <div class="d-flex gap-1 flex-wrap">
@@ -394,7 +394,7 @@
                                 <div class="card-body border border-dashed border-end-0 border-start-0">
                                     <form action="">
                                         <div class="row mb-3 mx-2 p-2 border ">
-                                            <div class="col-xxl-4">
+                                            <div class="col-xxl-6">
                                                 <div>
                                                     <div class="row mb-2 mt-4">
                                                         <div class="col-lg-4">
@@ -410,7 +410,7 @@
                                                             <label for="dateInput" class="form-label">Anggaran</label>
                                                         </div>
                                                         <div class="col-lg-8">
-                                                            <span class="fw-bold text-muted">BTT - 2023</span>
+                                                            <span class="fw-bold text-muted">DINKES PROV - 2023</span>
                                                             <!-- <input type="text" class="form-control border-0 fw-bold bg-white" id="datas" placeholder="2023" disabled> -->
                                                         </div>
                                                     </div>
@@ -425,52 +425,69 @@
                                                     </div>
                                                     <div class="row mb-2">
                                                         <div class="col-lg-4">
-                                                            <label for="leaveemails" class="form-label">Supplier</label>
+                                                            <label for="leaveemails" class="form-label">Dari</label>
                                                         </div>
                                                         <div class="col-lg-8">
-                                                            <span class="fw-bold text-muted">NONPBF</span> <br>
-                                                            <span class="fw-bold text-muted">Stock Opname 2022</span> 
-                                                            <!-- <input type="text" class="form-control border-0 fw-bold bg-white" id="datac" placeholder="NONPBF : " disabled> -->
+                                                            <select class="form-control" data-trigger name="productname-field" id="productname-field" required />
+                                                            <option value="">Pilih</option>
+                                                            <option value="Januari">Provinsi</option>
+                                                            <option value="Februari" selected>Dinkes</option>
+                                                            <option value="Maret">BKKBN</option>
+                                                            <option value="April">Lainnya</option>
+                                                        </select>
                                                         </div>
                                                     </div>
                                                     <div class="row mb-2">
                                                         <div class="col-lg-4">
-                                                            <label for="timeInput" class="form-label">Tgl. Jatuh Tempo</label>
+                                                            <label for="timeInput" class="form-label">Instansi</label>
                                                         </div>
                                                         <div class="col-lg-8">
-                                                            <span class="fw-bold text-muted">30-Okt-2023</span>
-                                                            <!-- <input type="text" class="form-control border-0 fw-bold bg-white" id="datax" placeholder="BTT" disabled> -->
+                                                            <!-- <span class="fw-bold text-muted">30-Okt-2023</span> -->
+                                                            <input type="text" class="form-control" id="datax" placeholder="Dinkes Provinsi Sumsel" disabled>
                                                         </div>
                                                     </div>
                                                     <div class="row mb-2">
                                                         <div class="col-lg-4">
-                                                            <label for="timeInput" class="form-label">Tgl. Penerimaan</label>
+                                                            <label for="timeInput" class="form-label">Catatan</label>
                                                         </div>
                                                         <div class="col-lg-8">
-                                                            <span class="fw-bold text-muted"></span>
-                                                            <!-- <input type="text" class="form-control border-0 fw-bold bg-white" id="datax" placeholder="BTT" disabled> -->
+                                                            <div>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-xxl-8">
+                                            <div class="col-xxl-6">
                                                 <div>
                                                     <div class="row mb-2 mt-4">
                                                         <div class="col-lg-3">
-                                                            <label for="websiteUrl" class="form-label">Nomor Kontrak</label>
+                                                            <label for="websiteUrl" class="form-label">Nomor SBBK</label>
                                                         </div>
                                                         <div class="col-lg-9">
-                                                            <span class="fw-bold text-muted">STOK OPNAME 31 DESEMBER 2022</span>
+                                                            <span class="fw-bold text-muted">150/VA/KES/X.10/2023</span>
                                                         </div>
                                                     </div>
                                                     <div class="row mb-2">
                                                         <div class="col-lg-3">
-                                                            <label for="kontrak" class="form-label">Tanggal Kontrak</label>
+                                                            <label for="kontrak" class="form-label">Tanggal SBBK</label>
                                                         </div>
                                                         <div class="col-lg-9">
                                                             <div class="input-group">
-                                                                <span class="fw-bold text-muted">30-Okt-2023</span>
+                                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y" placeholder="13 Oct, 2023">
+                                                                <span class="input-group-text" id="basic-addon2"><i class="ri-calendar-2-line"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-2">
+                                                        <div class="col-lg-3">
+                                                            <label for="kontrak" class="form-label">Tanggal Penerimaan</label>
+                                                        </div>
+                                                        <div class="col-lg-9">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y" placeholder="13 Oct, 2023">
+                                                                <span class="input-group-text" id="basic-addon2"><i class="ri-calendar-2-line"></i></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -490,32 +507,6 @@
                                                             <input type="text" class="form-control" id="nameInput" placeholder="0" disabled>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-3">
-                                                            <label for="dateInput" class="form-label">Tipe Penerimaan</label>
-                                                        </div>
-                                                        <div class="col-lg-9">
-                                                            <div class="anil_nepal">
-                                                                <label class="switch switch-left-right">
-                                                                  <input class="switch-input" type="checkbox">
-                                                                  <span class="switch-label" data-on="Faktur" data-off="SPB"></span> <span class="switch-handle"></span> </label>
-                                                              </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-4">
-                                                        <div class="col-lg-3">
-                                                            <label for="nameInput" class="form-label"></label>
-                                                        </div>
-                                                        <div class="col-lg-9">
-                                                            <label for="nameInput" class="form-label">Nomor Faktur</label>
-                                                            <input type="text" class="form-control" id="nameInput" placeholder="Nomor Faktur">
-                                                        </div>
-                                                    </div>
-                                                    <div class="justify-content-end text-end">
-                                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                            <i class="ri-add-fill align-bottom me-1"></i> Tambah SPB
-                                                        </button>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -534,148 +525,21 @@
                                                     }
                                                 </style>
                                                 <!-- Nav tabs -->
-                                                <ul class="nav nav-pills nav-custom-light border-bottom mb-3" role="tablist">
-                                                    <li class="nav-item waves-effect waves-light">
-                                                        <a class="nav-link active" data-bs-toggle="tab" href="#pemesanan" role="tab">
-                                                            <i class="ri-archive-fill me-2"></i>
-                                                            Pemesanan
-                                                        </a>
-                                                    </li>
-                                                    <li class="nav-item waves-effect waves-light">
-                                                        <a class="nav-link" data-bs-toggle="tab" href="#spb" role="tab">
-                                                            <i class=" ri-pages-line me-2"></i>
-                                                            SPB-1
+                                                <ul class="nav nav-tabs nav-tabs-custom nav-danger mb-3" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link bg-danger text-white" data-bs-toggle="tab" href="#home1" role="tab">
+                                                            DAFTAR OBAT
                                                         </a>
                                                     </li>
                                                 </ul>
             
                                                 <!-- Tab panes -->
                                                 <div class="tab-content text-muted">
-                                                    <div class="tab-pane active" id="pemesanan" role="tabpanel">
+                                                    <div class="tab-pane active" id="home1" role="tabpanel">
                                                         <div class="col-sm-auto mb-3">
-                                                            <div class="d-flex gap-1 flex-wrap justify-content-end">
-                                                                <button type="button" class="btn btn-outline-warning"><i class="ri-refresh-line align-bottom me-1"></i> Refresh Data</button>
-                                                            </div>
-                                                        </div>
-
-                                                        <table class="table table-nowrap align-middle">
-                                                            <thead class="text-muted table-light">
-                                                                <tr class="text-uppercase">
-                                                                    <th>
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="checkbox" id="checkAll" value="option">
-                                                                        </div>
-                                                                    </th>
-                                                                    <th >Kode</th>
-                                                                    <th >Nama Obat</th>
-                                                                    <th >Satuan Kecil</th>
-                                                                    <th >Harga</th>
-                                                                    <th >Sub Total</th>
-                                                                </tr>
-                                                            </thead>
-                                                        </table>
-                                                        <div data-simplebar style="height: 285px;" class="px-3 mx-n3 mb-2">
-                                                            <div>
-                                                                    <table class="table table-nowrap align-middle">
-                                                                        <tbody class="form-check-all">
-                                                                            <tr data-bs-toggle="modal" data-bs-target="#modalObats">
-                                                                                <th scope="row">
-                                                                                    <div class="form-check">
-                                                                                        <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
-                                                                                    </div>
-                                                                                </th>
-                                                                                <td ><a href="#" class="fw-medium link-primary">#VZ2101</a></td>
-                                                                                <td class="customer_name">Frank Hook</td>
-                                                                                <td class="product_name">Puma Tshirt</td>
-                                                                                <td class="date">20 Dec, 2021, <small class="text-muted">02:21
-                                                                                        AM</small></td>
-                                                                                <td class="amount">$654</td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                    
-                                                                    <div class="noresult" style="display: none">
-                                                                        <div class="text-center">
-                                                                            <lord-icon src="https://cdn.lordicon.com/msoeawqm.json"
-                                                                                trigger="loop" colors="primary:#405189,secondary:#0ab39c"
-                                                                                style="width:75px;height:75px">
-                                                                            </lord-icon>
-                                                                            <h5 class="mt-2">Sorry! No Result Found</h5>
-                                                                            <p class="text-muted">We've searched more than 150+ Orders We did
-                                                                                not find any
-                                                                                orders for you search.</p>
-                                                                        </div>
-                                                                    </div>
-                    
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="tab-pane" id="spb" role="tabpanel">
-                                                        <div class="row">
-                                                            <div class="col-xxl-4">
-                                                                <form action="">
-                                                                    <div class="row mb-2">
-                                                                        <div class="col-lg-3">
-                                                                            <label for="obat" class="form-label">No SPB</label>
-                                                                        </div>
-                                                                        <div class="col-lg-9">
-                                                                            <input type="url" class="form-control" id="obat" placeholder="">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row mb-2">
-                                                                        <div class="col-lg-3">
-                                                                            <label for="kontrak" class="form-label">Tanggal SPB</label>
-                                                                        </div>
-                                                                        <div class="col-lg-9">
-                                                                            <div class="input-group">
-                                                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y" placeholder="13 Oct, 2023">
-                                                                                <span class="input-group-text" id="basic-addon2"><i class="ri-calendar-2-line"></i></span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row mb-2">
-                                                                        <div class="col-lg-3">
-                                                                            <label for="kontrak" class="form-label">Tanggal Terima</label>
-                                                                        </div>
-                                                                        <div class="col-lg-9">
-                                                                            <div class="input-group">
-                                                                                <input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y" placeholder="13 Oct, 2023">
-                                                                                <span class="input-group-text" id="basic-addon2"><i class="ri-calendar-2-line"></i></span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </form>
-                                                            </div>
-                                                            <div class="col-xxl-8">
-                                                                <div>
-                                                                    <label for="exampleFormControlTextarea5" class="form-label">
-                                                                        Catatan : </label>
-                                                                    <textarea class="form-control bg-light" id="exampleFormControlTextarea5" rows="3"></textarea>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xxl-4 mb-4 mt-2">
-                                                                <div class="d-flex gap-1 flex-wrap justify-content-between">
-                                                                    <div>
-                                                                        <button type="button" class="btn btn-success">
-                                                                            <i class=" ri-checkbox-multiple-fill align-bottom me-1"></i> Terima
-                                                                        </button>
-                                                                        <button type="button" class="btn btn-danger"><i class="ri-delete-bin-line me-1"></i> Hapus</button>
-                                                                    </div>
-                                                                    <div>
-                                                                        <button type="button" class="btn btn-outline-primary">
-                                                                            <i class=" ri-database-2-line align-bottom me-1"></i> Penyimpanan
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-xxl-8 mt-2 mb-4">
-                                                                <div class="d-flex gap-1 flex-wrap justify-content-end">
-                                                                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal">
-                                                                        <i class="ri-add-fill align-bottom me-1"></i> Tambah
-                                                                    </button>
-                                                                    <button type="button" class="btn btn-outline-warning"><i class="ri-refresh-line align-bottom me-1"></i> Refresh Data</button>
-                                                                </div>
+                                                            <div class="d-flex gap-1 flex-wrap">
+                                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="ri-add-fill align-bottom me-1"></i> Tambah</button>
+                                                                <button type="button" class="btn btn-outline-primary"><i class="ri-refresh-line align-bottom me-1"></i> Refresh</button>
                                                             </div>
                                                         </div>
                                                         <table class="table table-nowrap align-middle">
@@ -698,7 +562,8 @@
                                                             <div>
                                                                     <table class="table table-nowrap align-middle">
                                                                         <tbody class="form-check-all">
-                                                                            <tr data-bs-toggle="modal" data-bs-target="#modalObats">
+                                                                            
+                                                                            <tr data-bs-toggle="modal" id="create-btn" data-bs-target="#modalObats">
                                                                                 <th scope="row">
                                                                                     <div class="form-check">
                                                                                         <input class="form-check-input" type="checkbox" name="checkAll" value="option1">

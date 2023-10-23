@@ -349,12 +349,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Pemesanan</h4>
+                                <h4 class="mb-sm-0">Penerimaan</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Barang</a></li>
-                                        <li class="breadcrumb-item active">Pengadaan</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Penerimaan</a></li>
+                                        <li class="breadcrumb-item active">Dari PBF</li>
                                     </ol>
                                 </div>
 
@@ -369,19 +369,27 @@
                                 <div class="card-header border-0">
                                     <div class="row align-items-center gy-3">
                                         <div class="col-sm">
-                                            <h5 class="card-title mb-0">Pengadaan</h5>
+                                            <h5 class="card-title mb-0">Dropping / Non PBF</h5>
                                         </div>
                                         <div class="col-sm-auto">
                                             <div class="d-flex gap-1 flex-wrap">
-                                                <button type="button" class="btn btn-secondary add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModals"><i class="ri-add-line align-bottom me-1"></i> Tambah Data</button>
-                                                <button type="button" class="btn btn-primary"><i class="ri-printer-fill align-bottom me-1"></i> Print</button>
+                                                <button type="button" class="btn btn-secondary add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModals"><i class="ri-add-line align-bottom me-1"></i> Tambah</button>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-success" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="ri-printer-fill me-2"></i> Print <i class=" ri-arrow-down-s-line"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-end">
+                                                        <a class="dropdown-item" href="#"><i class="ri-file-excel-line align-bottom text-muted me-2"></i> Export</a>
+                                                        <a class="dropdown-item" href="#"><i class="ri-printer-line align-bottom text-muted me-2"></i> Print</a>
+                                                    </div>
+                                                </div>
                                                 <button type="button" class="btn btn-info"><i class="ri-refresh-line align-bottom me-1"></i> Refresh</button>
                                                 <button class="btn btn-soft-danger" id="remove-actions" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body border bg-soft-info border-dashed border-end-0 border-start-0">
+                                <div class="card-body border bg-soft-success border-dashed border-end-0 border-start-0">
                                     <form>
                                         <div class="row g-3">
                                             <div class="col-xxl-3 col-sm-6">
@@ -465,31 +473,6 @@
                                     
                                 </div>
                                 <div class="card-body">
-                                    <!-- MOdal -->
-                                    <div id="pesan_modal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                                        <div class="modal-dialog modal-dialog-centered modal-sm">
-                                            <div class="modal-content">
-                                                <div class="modal-body mt-4 text-center">
-                                                    <h5 class="fs-15 fw-bold">
-                                                        20226019
-                                                    </h5>
-                                                    <p class="text-muted">Stok Opname 2022</p>
-                                                    <div class="d-flex gap-2">
-                                                        <a href="a_pemesanan_detail.html" type="button" class="btn w-100 btn-warning ">EDIT</a>
-                                                        <button type="button" class="btn w-100 btn-danger" data-bs-dismiss="modal">delete</button>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer justify-content-center">
-                                                    <button type="button" class="btn w-100 btn-outline-danger" data-bs-dismiss="modal">Tutup</button>
-                                                </div>
-                                                
-                                                
-                                            </div><!-- /.modal-content -->
-                                        </div><!-- /.modal-dialog -->
-                                    </div>
-                                    <!-- End Modal -->
-
-
                                     <ul class="nav nav-tabs nav-tabs-custom nav-success mb-3" role="tablist">
                                         <li class="nav-item">
                                             <a class="nav-link py-3">
@@ -532,9 +515,28 @@
                                             </a>
                                         </li>
                                     </ul>
+                                    <!-- MODAL -->
+                                    <div id="terima_modal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                        <div class="modal-dialog modal-dialog-centered modal-sm">
+                                            <div class="modal-content">
+                                                <div class="modal-body mt-4 text-center">
+                                                    <h5 class="fs-15 fw-bold">
+                                                        Provinsi
+                                                    </h5>
+                                                    <p class="text-muted">20226019 </p>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="a_terima_dropping_detail.html" type="button" class="btn w-100 btn-warning ">EDIT</a>
+                                                        <button type="button" class="btn w-100 btn-outline-warning" data-bs-dismiss="modal">Tutup</button>
+                                                    </div>
+                                                </div>                                                
+                                            </div><!-- /.modal-content -->
+                                        </div><!-- /.modal-dialog -->
+                                    </div>
+                                    <!-- END MODAL -->
+
                                     <table class="table table-nowrap align-middle">
                                         <thead class="text-muted table-light">
-                                            <tr class="text-uppercase">
+                                            <tr>
                                                 <th>
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" id="checkAll" value="option">
@@ -551,11 +553,12 @@
                                             </tr>
                                         </thead>
                                     </table>
+
                                     <div data-simplebar style="height: 285px;" class="px-3 mx-n3 mb-2">
                                         <div>
                                                 <table class="table table-nowrap align-middle">
                                                     <tbody class="form-check-all">
-                                                        <tr data-bs-toggle="modal" data-bs-target="#pesan_modal">
+                                                        <tr data-bs-toggle="modal" data-bs-target="#terima_modal">
                                                             <th scope="row">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
@@ -572,7 +575,7 @@
                                                             <td class="status"><span class="badge badge-soft-warning text-uppercase">Pending</span>
                                                             </td>
                                                         </tr>
-                                                        <tr data-bs-toggle="modal" data-bs-target="#pesan_modal">
+                                                        <tr data-bs-toggle="modal" data-bs-target="#terima_modal">
                                                             <th scope="row">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
@@ -589,7 +592,7 @@
                                                             <td class="status"><span class="badge badge-soft-warning text-uppercase">Pending</span>
                                                             </td>
                                                         </tr>
-                                                        <tr data-bs-toggle="modal" data-bs-target="#pesan_modal">
+                                                        <tr data-bs-toggle="modal" data-bs-target="#terima_modal">
                                                             <th scope="row">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
@@ -606,7 +609,7 @@
                                                             <td class="status"><span class="badge badge-soft-warning text-uppercase">Pending</span>
                                                             </td>
                                                         </tr>
-                                                        <tr data-bs-toggle="modal" data-bs-target="#pesan_modal">
+                                                        <tr data-bs-toggle="modal" data-bs-target="#terima_modal">
                                                             <th scope="row">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
@@ -623,7 +626,7 @@
                                                             <td class="status"><span class="badge badge-soft-warning text-uppercase">Pending</span>
                                                             </td>
                                                         </tr>
-                                                        <tr data-bs-toggle="modal" data-bs-target="#pesan_modal">
+                                                        <tr data-bs-toggle="modal" data-bs-target="#terima_modal">
                                                             <th scope="row">
                                                                 <div class="form-check">
                                                                     <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
@@ -659,6 +662,7 @@
                                         </div>
                                         <!--end modal -->
                                     </div>
+
                                     <form class="mt-4">
                                         <div class="row g-3">
                                             <div class="d-flex justify-content-start">
@@ -673,8 +677,8 @@
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <div class="alert alert-info text-end">
-                                                    <p class="mb-0"><span class="fw-semibold">NILAI RENCANA PENGADAAN :</span> <br>
+                                                <div class="alert alert-success text-end">
+                                                    <p class="mb-0"><span class="fw-semibold">NILAI DROPPING :</span> <br>
                                                         <span id="note" style="font-size: 32px; font-weight: 800;">Rp. 1.234.000,00,-
                                                         </span>
                                                     </p>
@@ -682,10 +686,9 @@
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-flex flex-wrap gap-2">
-                                                    <span class="badge text-bg-secondary">Terima / Selesai</span>
-                                                    <span class="badge text-bg-success">Proses / Setuju</span>
-                                                    <span class="badge text-bg-danger">Jatuh Tempo</span>
-                                                    <span class="badge text-bg-warning">Batal</span>
+                                                    <span class="badge text-bg-secondary">Terima</span>
+                                                    <span class="badge text-bg-success">Setuju</span>
+                                                    <span class="badge text-bg-warning">Review</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -723,89 +726,89 @@
     </div>
     <!-- END layout-wrapper -->
 
-    <div class="modal fade" id="showModals" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header bg-light p-3">
-                <h5 class="modal-title">Pengadaan Baru</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close" id="close-modal"></button>
+    <div class="modal fade" id="showModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light p-3">
+                    <h5 class="modal-title">Pengadaan Baru</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close" id="close-modal"></button>
+                </div>
+                <form class="tablelist-form" autocomplete="off">
+                    <div class="modal-body">
+                        <input type="hidden" id="id-field" />
+
+                        <div class="mb-3">
+                            <label for="productname-field" class="form-label">Tahun Anggaran</label>
+                            <select class="form-control" data-trigger name="productname-field" id="productname-field" required />
+                                <option value="">Pilih Tahun Anggaran</option>
+                                <option value="2026">2026</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <div>
+                                <label for="contract-field" class="form-label">Nomor Kontrak</label>
+                                <input type="text" id="contract-field" class="form-control" placeholder="Nomor Kontrak" required />
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="date-field" class="form-label">Tanggal Mulai Kontrak</label>
+                            <input type="date" id="date-field" class="form-control" data-provider="flatpickr" required data-date-format="d M, Y" data-enable-time required placeholder="Select date" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="date-field" class="form-label">Tanggal Akhir Kontrak</label>
+                            <input type="date" id="date-field" class="form-control" data-provider="flatpickr" required data-date-format="d M, Y" data-enable-time required placeholder="Select date" />
+                        </div>
+
+                        <div class="row gy-4 mb-3">
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="productname-field" class="form-label">Sumber Dana</label>
+                                    <select class="form-control" data-trigger name="productname-field" id="productname-field" required />
+                                        <option value="">Pilih Sumber Dana</option>
+                                        <option value="BLUD">BLUD</option>
+                                        <option value="APBN">APBN</option>
+                                        <option value="APBD">APBD</option>
+                                        <option value="Kemenkes RI">Kemenkes RI</option>
+                                        <option value="E-Katalog">E-Katalog</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="payment-field" class="form-label">Supplier</label>
+                                    <select class="form-control" data-trigger name="payment-method" required id="payment-field">
+                                        <option value="">Pilih Supplier</option>
+                                        <option value="Mastercard">Bio Farma</option>
+                                        <option value="Visa">Kimia Farma</option>
+                                        <option value="COD">Ifars</option>
+                                        <option value="Paypal">Pfizer</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="hstack gap-2 justify-content-end">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success" id="add-btn">Add Order</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <form class="tablelist-form" autocomplete="off">
-                <div class="modal-body">
-                    <input type="hidden" id="id-field" />
-
-                    <div class="mb-3">
-                        <label for="productname-field" class="form-label">Tahun Anggaran</label>
-                        <select class="form-control" data-trigger name="productname-field" id="productname-field" required />
-                            <option value="">Pilih Tahun Anggaran</option>
-                            <option value="2026">2026</option>
-                            <option value="2025">2025</option>
-                            <option value="2024">2024</option>
-                            <option value="2023">2023</option>
-                            <option value="2022">2022</option>
-                            <option value="2021">2021</option>
-                            <option value="2020">2020</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <div>
-                            <label for="contract-field" class="form-label">Nomor Kontrak</label>
-                            <input type="text" id="contract-field" class="form-control" placeholder="Nomor Kontrak" required />
-                        </div>
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="date-field" class="form-label">Tanggal Mulai Kontrak</label>
-                        <input type="date" id="date-field" class="form-control" data-provider="flatpickr" required data-date-format="d M, Y" data-enable-time required placeholder="Select date" />
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="date-field" class="form-label">Tanggal Akhir Kontrak</label>
-                        <input type="date" id="date-field" class="form-control" data-provider="flatpickr" required data-date-format="d M, Y" data-enable-time required placeholder="Select date" />
-                    </div>
-
-                    <div class="row gy-4 mb-3">
-                        <div class="col-md-6">
-                            <div>
-                                <label for="productname-field" class="form-label">Sumber Dana</label>
-                                <select class="form-control" data-trigger name="productname-field" id="productname-field" required />
-                                    <option value="">Pilih Sumber Dana</option>
-                                    <option value="BLUD">BLUD</option>
-                                    <option value="APBN">APBN</option>
-                                    <option value="APBD">APBD</option>
-                                    <option value="Kemenkes RI">Kemenkes RI</option>
-                                    <option value="E-Katalog">E-Katalog</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div>
-                                <label for="payment-field" class="form-label">Supplier</label>
-                                <select class="form-control" data-trigger name="payment-method" required id="payment-field">
-                                    <option value="">Pilih Supplier</option>
-                                    <option value="Mastercard">Bio Farma</option>
-                                    <option value="Visa">Kimia Farma</option>
-                                    <option value="COD">Ifars</option>
-                                    <option value="Paypal">Pfizer</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <div class="hstack gap-2 justify-content-end">
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-success" id="add-btn">Add Order</button>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
-</div>
+
 
 <!-- Modal -->
 <div class="modal fade flip" id="deleteOrder" tabindex="-1" aria-hidden="true">

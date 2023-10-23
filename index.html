@@ -176,6 +176,107 @@
                             </button>
                         </div>
 
+                        <div class="dropdown topbar-head-dropdown ms-1 header-item" id="notificationDropdown">
+                            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
+                                <i class='bx bx-bell fs-22'></i>
+                                <span class="position-absolute topbar-badge fs-10 translate-middle badge rounded-pill bg-danger">400<span class="visually-hidden">unread messages</span></span>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+        
+                                <div class="tab-content position-relative" id="notificationItemsTabContent">
+                                    <div class="tab-pane fade show active py-2 ps-2" id="all-noti-tab" role="tabpanel">
+                                        <div data-simplebar style="max-height: 300px;" class="pe-2">
+                                            <div class="text-reset notification-item d-block dropdown-item position-relative py-0">
+                                                <div class="d-flex">
+                                                    <div class="avatar-xs me-3">
+                                                        <span>11</span>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 lh-base">Kedaluwarsa</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-reset notification-item d-block dropdown-item position-relative py-0">
+                                                <div class="d-flex">
+                                                    <div class="avatar-xs me-3">
+                                                        <span>10</span>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 lh-base">3 Bulan Kedaluwarsa</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-reset notification-item d-block dropdown-item position-relative py-0">
+                                                <div class="d-flex">
+                                                    <div class="avatar-xs me-3">
+                                                        <span>370</span>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 lh-base">Stock Obat Kurang Dari Minimum</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-reset notification-item d-block dropdown-item position-relative py-0">
+                                                <div class="d-flex">
+                                                    <div class="avatar-xs me-3">
+                                                        <span>7</span>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 lh-base">Pemesanan LPLPO</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-reset notification-item d-block dropdown-item position-relative py-0">
+                                                <div class="d-flex">
+                                                    <div class="avatar-xs me-3">
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 lh-base">Pemesanan BON</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-reset notification-item d-block dropdown-item position-relative py-0">
+                                                <div class="d-flex">
+                                                    <div class="avatar-xs me-3">
+                                                        <span>0</span>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 lh-base">Retur Kedaluwarsa</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-reset notification-item d-block dropdown-item position-relative py-0">
+                                                <div class="d-flex">
+                                                    <div class="avatar-xs me-3">
+                                                        <span>1</span>
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <a href="#!" class="stretched-link">
+                                                            <h6 class="mt-0 lh-base">Retur Slow Moving</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="dropdown ms-sm-3 header-item topbar-user">
                             <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="d-flex align-items-center">
@@ -280,6 +381,15 @@
                                         <a href="a_pemesanan.html" class="nav-link" data-key="t-calendar"> Pengadaan/Pemesanan </a>
                                     </li>
                                     <li class="nav-item">
+                                        <a href="a_rekap_distributor.html" class="nav-link" data-key="t-calendar"> Lap. Pemesanan </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="a_rekap_terima_distributor.html" class="nav-link" data-key="t-calendar"> Lap. Progres Pemesanan [Perbulan] </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="a_rekap_penerimaan_bmhp.html" class="nav-link" data-key="t-calendar"> Lap. Progres Pemesanan [Pertanggal] </a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a href="#" class="nav-link" data-key="t-chat"> Mutasi </a>
                                     </li>
                                     <li class="nav-item">
@@ -298,19 +408,19 @@
                             <div class="collapse menu-dropdown" id="sidebarLayouts">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="a_terima.html" target="_blank" class="nav-link" data-key="t-horizontal">Dari Pemesan</a>
+                                        <a href="a_terima.html" class="nav-link" data-key="t-horizontal">Dari Pemesan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" target="_blank" class="nav-link" data-key="t-detached">Dropping / Hibah</a>
+                                        <a href="a_terima_dropping.html" class="nav-link" data-key="t-detached">Dropping / Hibah</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" target="_blank" class="nav-link" data-key="t-two-column">Kedaluarsa</a>
+                                        <a href="a_terima_kedaluarsa.html" class="nav-link" data-key="t-two-column">Kedaluwarsa</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" target="_blank" class="nav-link" data-key="t-hovered">Retur</a>
+                                        <a href="a_terima_retur.html" class="nav-link" data-key="t-hovered">Retur</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" target="_blank" class="nav-link" data-key="t-hovered">...</a>
+                                        <a href="#" class="nav-link" data-key="t-hovered">...</a>
                                     </li>
                                 </ul>
                             </div>
@@ -336,294 +446,326 @@
             <div class="page-content">
                 <div class="container-fluid">
 
-                    <!-- start page title -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0"><span style="color: chocolate;">E-Laksan</span> | Kabupaten Ogan Ilir</h4>
-
-                                <div class="page-title-right">
-                                    <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">App</a></li>
-                                        <li class="breadcrumb-item active">Dashboard</li>
-                                    </ol>
-                                </div>
-
-                            </div>
+                    <div class="profile-foreground position-relative mx-n4 mt-n4">
+                        <div class="profile-wid-bg">
+                            <img src="assets/images/bg-drugs.jpg" alt="" class="profile-wid-img" />
                         </div>
+                    </div>
+                    <div class="pt-4 mb-4 mb-lg-3 pb-lg-4">
+                        <div class="row g-4">
+                            <div class="col-auto">
+                                <div class="avatar-lg">
+                                    <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-thumbnail rounded-circle" />
+                                </div>
+                            </div>
+                            <!--end col-->
+                            <div class="col">
+                                <div class="p-2">
+                                    <h3 class="text-white mb-1">Anna Adame</h3>
+                                    <p class="text-white-75">Administrator</p>
+                                    <div class="hstack text-white-50 gap-1">
+                                        <div class="me-2"><i class="ri-map-pin-user-line me-1 text-white-75 fs-16 align-middle"></i>Indralaya, Ogan Ilir</div>
+                                        <div><i class="ri-building-line me-1 text-white-75 fs-16 align-middle"></i>Gudang Farmasi
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end col-->
+                            <div class="col-12 col-lg-auto order-last order-lg-0">
+                                <div class="row text text-white-50 text-center">
+                                    <div class="col-lg-6 col-4">
+                                        <div class="p-2">
+                                            <h4 class="text-white mb-1">24.3K</h4>
+                                            <p class="fs-14 mb-0">Followers</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-4">
+                                        <div class="p-2">
+                                            <h4 class="text-white mb-1">1.3K</h4>
+                                            <p class="fs-14 mb-0">Following</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end col-->
+
+                        </div>
+                        <!--end row-->
                     </div>
 
                     <!-- end page title -->
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="swiper cryptoSlider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="card bg-danger">
-                                            <div class="card-body">
-                                                <div class="float-end">
-                                                    <div class="dropdown">
-                                                        <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Details</a>
-                                                            <a class="dropdown-item" href="#">Cancel</a>
+                        <div class="card mx-2 p-3 bg-wh">
+                            <div class="col-lg-12">
+                                <div class="swiper cryptoSlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="card bg-danger">
+                                                <div class="card-body">
+                                                    <div class="float-end">
+                                                        <div class="dropdown">
+                                                            <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="#">Details</a>
+                                                                <a class="dropdown-item" href="#">Cancel</a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
-                                                        <i class=" ri-hospital-fill align-middle"></i>
-                                                    </span>
-                                                    <h6 class="ms-2 mb-0">Puskesmas</h6>
-                                                </div>
-                                                <div class="row align-items-end g-0">
-                                                    <div class="col-6">
-                                                        <h5 class="mb-1 mt-4">$1,523,647</h5>
-                                                        <p class="text-muted fw-medium mb-0">+13.11%<span class="text-muted ms-2 text-uppercase">(btc)</span></p>
-                                                    </div><!-- end col -->
-                                                    <div class="col-6">
-                                                        <div class="apex-charts crypto-widget" data-colors='["--vz-success" , "--vz-transparent"]' id="bitcoin_sparkline_charts" dir="ltr"></div>
-                                                    </div><!-- end col -->
-                                                </div><!-- end row -->
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end -->
-
-                                    <div class="swiper-slide">
-                                        <div class="card bg-ungu">
-                                            <div class="card-body">
-                                                <div class="float-end">
-                                                    <div class="dropdown">
-                                                        <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Details</a>
-                                                            <a class="dropdown-item" href="#">Cancel</a>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
+                                                            <i class=" ri-hospital-fill align-middle"></i>
+                                                        </span>
+                                                        <h6 class="ms-2 mb-0">Puskesmas</h6>
+                                                    </div>
+                                                    <div class="row align-items-end g-0">
+                                                        <div class="col-6">
+                                                            <h5 class="mb-1 mt-4">$1,523,647</h5>
+                                                            <p class="text-muted fw-medium mb-0">+13.11%<span class="text-muted ms-2 text-uppercase">(btc)</span></p>
+                                                        </div><!-- end col -->
+                                                        <div class="col-6">
+                                                            <div class="apex-charts crypto-widget" data-colors='["--vz-success" , "--vz-transparent"]' id="bitcoin_sparkline_charts" dir="ltr"></div>
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                </div><!-- end card body -->
+                                            </div><!-- end card -->
+                                        </div><!-- end -->
+    
+                                        <div class="swiper-slide">
+                                            <div class="card bg-ungu">
+                                                <div class="card-body">
+                                                    <div class="float-end">
+                                                        <div class="dropdown">
+                                                            <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="#">Details</a>
+                                                                <a class="dropdown-item" href="#">Cancel</a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
-                                                        <i class="ri-building-fill align-middle"></i>
-                                                    </span>
-                                                    <h6 class="ms-2 mb-0">Non-Puskesmas</h6>
-                                                </div>
-                                                <div class="row align-items-end g-0">
-                                                    <div class="col-6">
-                                                        <h5 class="mb-1 mt-4">$2,145,687</h5>
-                                                        <p class="text-muted fw-medium mb-0">+15.08%<span class="text-muted ms-2 text-uppercase">(ltc)</span></p>
-                                                    </div><!-- end col -->
-                                                    <div class="col-6">
-                                                        <div class="apex-charts crypto-widget" data-colors='["--vz-success", "--vz-transparent"]' id="litecoin_sparkline_charts" dir="ltr"></div>
-                                                    </div><!-- end col -->
-                                                </div><!-- end row -->
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end -->
-
-                                    <div class="swiper-slide">
-                                        <div class="card bg-info">
-                                            <div class="card-body">
-                                                <div class="float-end">
-                                                    <div class="dropdown">
-                                                        <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Details</a>
-                                                            <a class="dropdown-item" href="#">Cancel</a>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
+                                                            <i class="ri-building-fill align-middle"></i>
+                                                        </span>
+                                                        <h6 class="ms-2 mb-0">Non-Puskesmas</h6>
+                                                    </div>
+                                                    <div class="row align-items-end g-0">
+                                                        <div class="col-6">
+                                                            <h5 class="mb-1 mt-4">$2,145,687</h5>
+                                                            <p class="text-muted fw-medium mb-0">+15.08%<span class="text-muted ms-2 text-uppercase">(ltc)</span></p>
+                                                        </div><!-- end col -->
+                                                        <div class="col-6">
+                                                            <div class="apex-charts crypto-widget" data-colors='["--vz-success", "--vz-transparent"]' id="litecoin_sparkline_charts" dir="ltr"></div>
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                </div><!-- end card body -->
+                                            </div><!-- end card -->
+                                        </div><!-- end -->
+    
+                                        <div class="swiper-slide">
+                                            <div class="card bg-info">
+                                                <div class="card-body">
+                                                    <div class="float-end">
+                                                        <div class="dropdown">
+                                                            <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="#">Details</a>
+                                                                <a class="dropdown-item" href="#">Cancel</a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
-                                                        <i class="ri-currency-fill align-middle"></i>
-                                                    </span>
-                                                    <h6 class="ms-2 mb-0">Nilai Pengadaan</h6>
-                                                </div>
-                                                <div class="row align-items-end g-0">
-                                                    <div class="col-6">
-                                                        <h5 class="mb-1 mt-4">$3,312,870</h5>
-                                                        <p class="text-muted fw-medium mb-0">+08.57%<span class="text-muted ms-2 text-uppercase">(etc)</span></p>
-                                                    </div><!-- end col -->
-                                                    <div class="col-6">
-                                                        <div class="apex-charts crypto-widget" data-colors='["--vz-success", "--vz-transparent"]' id="eathereum_sparkline_charts" dir="ltr"></div>
-                                                    </div><!-- end col -->
-                                                </div><!-- end row -->
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end -->
-
-                                    <div class="swiper-slide">
-                                        <div class="card bg-biru">
-                                            <div class="card-body">
-                                                <div class="float-end">
-                                                    <div class="dropdown">
-                                                        <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Details</a>
-                                                            <a class="dropdown-item" href="#">Cancel</a>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
+                                                            <i class="ri-currency-fill align-middle"></i>
+                                                        </span>
+                                                        <h6 class="ms-2 mb-0">Nilai Pengadaan</h6>
+                                                    </div>
+                                                    <div class="row align-items-end g-0">
+                                                        <div class="col-6">
+                                                            <h5 class="mb-1 mt-4">$3,312,870</h5>
+                                                            <p class="text-muted fw-medium mb-0">+08.57%<span class="text-muted ms-2 text-uppercase">(etc)</span></p>
+                                                        </div><!-- end col -->
+                                                        <div class="col-6">
+                                                            <div class="apex-charts crypto-widget" data-colors='["--vz-success", "--vz-transparent"]' id="eathereum_sparkline_charts" dir="ltr"></div>
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                </div><!-- end card body -->
+                                            </div><!-- end card -->
+                                        </div><!-- end -->
+    
+                                        <div class="swiper-slide">
+                                            <div class="card bg-biru">
+                                                <div class="card-body">
+                                                    <div class="float-end">
+                                                        <div class="dropdown">
+                                                            <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="#">Details</a>
+                                                                <a class="dropdown-item" href="#">Cancel</a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
-                                                        <i class="ri-currency-fill align-middle"></i>
-                                                    </span>
-                                                    <h6 class="ms-2 mb-0">Nilai Penerimaan PBF</h6>
-                                                </div>
-                                                <div class="row align-items-end g-0">
-                                                    <div class="col-6">
-                                                        <h5 class="mb-1 mt-4">$1,820,045</h5>
-                                                        <p class="text-muted fs-13 fw-medium mb-0">-09.21%<span class="text-muted ms-2 text-uppercase">(bnb)</span></p>
-                                                    </div><!-- end col -->
-                                                    <div class="col-6">
-                                                        <div class="apex-charts crypto-widget" data-colors='["--vz-danger", "--vz-transparent"]' id="binance_sparkline_charts" dir="ltr"></div>
-                                                    </div><!-- end col -->
-                                                </div><!-- end row -->
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end -->
-
-                                    <div class="swiper-slide">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="float-end">
-                                                    <div class="dropdown">
-                                                        <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Details</a>
-                                                            <a class="dropdown-item" href="#">Cancel</a>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
+                                                            <i class="ri-currency-fill align-middle"></i>
+                                                        </span>
+                                                        <h6 class="ms-2 mb-0">Nilai Penerimaan PBF</h6>
+                                                    </div>
+                                                    <div class="row align-items-end g-0">
+                                                        <div class="col-6">
+                                                            <h5 class="mb-1 mt-4">$1,820,045</h5>
+                                                            <p class="text-muted fs-13 fw-medium mb-0">-09.21%<span class="text-muted ms-2 text-uppercase">(bnb)</span></p>
+                                                        </div><!-- end col -->
+                                                        <div class="col-6">
+                                                            <div class="apex-charts crypto-widget" data-colors='["--vz-danger", "--vz-transparent"]' id="binance_sparkline_charts" dir="ltr"></div>
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                </div><!-- end card body -->
+                                            </div><!-- end card -->
+                                        </div><!-- end -->
+    
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="float-end">
+                                                        <div class="dropdown">
+                                                            <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="#">Details</a>
+                                                                <a class="dropdown-item" href="#">Cancel</a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
-                                                        <i class="ri-currency-fill align-middle"></i>
-                                                    </span>
-                                                    <h6 class="ms-2 mb-0">Nilai Dropping / Hibah</h6>
-                                                </div>
-                                                <div class="row align-items-end g-0">
-                                                    <div class="col-6">
-                                                        <h5 class="mb-1 mt-4">$9,458,153</h5>
-                                                        <p class="text-muted fw-medium mb-0">+12.07%<span class="text-muted ms-2 text-uppercase">(dash)</span></p>
-                                                    </div><!-- end col -->
-                                                    <div class="col-6">
-                                                        <div class="apex-charts crypto-widget" data-colors='["--vz-success", "--vz-transparent"]' id="dash_sparkline_charts" dir="ltr"></div>
-                                                    </div><!-- end col -->
-                                                </div><!-- end row -->
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end -->
-
-                                    <div class="swiper-slide">
-                                        <div class="card bg-kuning">
-                                            <div class="card-body">
-                                                <div class="float-end">
-                                                    <div class="dropdown">
-                                                        <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Details</a>
-                                                            <a class="dropdown-item" href="#">Cancel</a>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
+                                                            <i class="ri-currency-fill align-middle"></i>
+                                                        </span>
+                                                        <h6 class="ms-2 mb-0">Nilai Dropping / Hibah</h6>
+                                                    </div>
+                                                    <div class="row align-items-end g-0">
+                                                        <div class="col-6">
+                                                            <h5 class="mb-1 mt-4">$9,458,153</h5>
+                                                            <p class="text-muted fw-medium mb-0">+12.07%<span class="text-muted ms-2 text-uppercase">(dash)</span></p>
+                                                        </div><!-- end col -->
+                                                        <div class="col-6">
+                                                            <div class="apex-charts crypto-widget" data-colors='["--vz-success", "--vz-transparent"]' id="dash_sparkline_charts" dir="ltr"></div>
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                </div><!-- end card body -->
+                                            </div><!-- end card -->
+                                        </div><!-- end -->
+    
+                                        <div class="swiper-slide">
+                                            <div class="card bg-kuning">
+                                                <div class="card-body">
+                                                    <div class="float-end">
+                                                        <div class="dropdown">
+                                                            <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="#">Details</a>
+                                                                <a class="dropdown-item" href="#">Cancel</a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
-                                                        <i class="ri-currency-fill align-middle"></i>
-                                                    </span>
-                                                    <h6 class="ms-2 mb-0">Nilai Distribusi</h6>
-                                                </div>
-                                                <div class="row align-items-end g-0">
-                                                    <div class="col-6">
-                                                        <h5 class="mb-1 mt-4">$5,201,458</h5>
-                                                        <p class="text-muted fw-medium mb-0">+14.99%<span class="text-muted ms-2 text-uppercase">(usdt)</span></p>
-                                                    </div><!-- end col -->
-                                                    <div class="col-6">
-                                                        <div class="apex-charts crypto-widget" data-colors='["--vz-success", "--vz-transparent"]' id="tether_sparkline_charts" dir="ltr"></div>
-                                                    </div><!-- end col -->
-                                                </div><!-- end row -->
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end -->
-
-                                    <div class="swiper-slide">
-                                        <div class="card bg-pink">
-                                            <div class="card-body">
-                                                <div class="float-end">
-                                                    <div class="dropdown">
-                                                        <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Details</a>
-                                                            <a class="dropdown-item" href="#">Cancel</a>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
+                                                            <i class="ri-currency-fill align-middle"></i>
+                                                        </span>
+                                                        <h6 class="ms-2 mb-0">Nilai Distribusi</h6>
+                                                    </div>
+                                                    <div class="row align-items-end g-0">
+                                                        <div class="col-6">
+                                                            <h5 class="mb-1 mt-4">$5,201,458</h5>
+                                                            <p class="text-muted fw-medium mb-0">+14.99%<span class="text-muted ms-2 text-uppercase">(usdt)</span></p>
+                                                        </div><!-- end col -->
+                                                        <div class="col-6">
+                                                            <div class="apex-charts crypto-widget" data-colors='["--vz-success", "--vz-transparent"]' id="tether_sparkline_charts" dir="ltr"></div>
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                </div><!-- end card body -->
+                                            </div><!-- end card -->
+                                        </div><!-- end -->
+    
+                                        <div class="swiper-slide">
+                                            <div class="card bg-pink">
+                                                <div class="card-body">
+                                                    <div class="float-end">
+                                                        <div class="dropdown">
+                                                            <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="#">Details</a>
+                                                                <a class="dropdown-item" href="#">Cancel</a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
-                                                        <i class="ri-currency-fill align-middle"></i>
-                                                    </span>
-                                                    <h6 class="ms-2 mb-0">Nilai Pemusnahan</h6>
-                                                </div>
-                                                <div class="row align-items-end g-0">
-                                                    <div class="col-6">
-                                                        <h5 class="mb-1 mt-4">$6,147,957</h5>
-                                                        <p class="text-muted fs-13 fw-medium mb-0">-05.07%<span class="text-muted ms-2 text-uppercase">(neo)</span></p>
-                                                    </div><!-- end col -->
-                                                    <div class="col-6">
-                                                        <div class="apex-charts crypto-widget" data-colors='["--vz-danger", "--vz-transparent"]' id="neo_sparkline_charts" dir="ltr"></div>
-                                                    </div><!-- end col -->
-                                                </div><!-- end row -->
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end -->
-
-                                    <div class="swiper-slide">
-                                        <div class="card bg-hijau">
-                                            <div class="card-body">
-                                                <div class="float-end">
-                                                    <div class="dropdown">
-                                                        <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Details</a>
-                                                            <a class="dropdown-item" href="#">Cancel</a>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
+                                                            <i class="ri-currency-fill align-middle"></i>
+                                                        </span>
+                                                        <h6 class="ms-2 mb-0">Nilai Pemusnahan</h6>
+                                                    </div>
+                                                    <div class="row align-items-end g-0">
+                                                        <div class="col-6">
+                                                            <h5 class="mb-1 mt-4">$6,147,957</h5>
+                                                            <p class="text-muted fs-13 fw-medium mb-0">-05.07%<span class="text-muted ms-2 text-uppercase">(neo)</span></p>
+                                                        </div><!-- end col -->
+                                                        <div class="col-6">
+                                                            <div class="apex-charts crypto-widget" data-colors='["--vz-danger", "--vz-transparent"]' id="neo_sparkline_charts" dir="ltr"></div>
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                </div><!-- end card body -->
+                                            </div><!-- end card -->
+                                        </div><!-- end -->
+    
+                                        <div class="swiper-slide">
+                                            <div class="card bg-hijau">
+                                                <div class="card-body">
+                                                    <div class="float-end">
+                                                        <div class="dropdown">
+                                                            <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <span class="text-muted fs-18"><i class="mdi mdi-dots-horizontal"></i></span>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-end">
+                                                                <a class="dropdown-item" href="#">Details</a>
+                                                                <a class="dropdown-item" href="#">Cancel</a>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
-                                                        <i class="ri-currency-fill align-middle"></i>
-                                                    </span>
-                                                    <h6 class="ms-2 mb-0">Nilai Aset</h6>
-                                                </div>
-                                                <div class="row align-items-end g-0">
-                                                    <div class="col-6">
-                                                        <h5 class="mb-1 mt-4">$6,147,957</h5>
-                                                        <p class="text-muted fs-13 fw-medium mb-0">-05.07%<span class="text-muted ms-2 text-uppercase">(neo)</span></p>
-                                                    </div><!-- end col -->
-                                                    <div class="col-6">
-                                                        <div class="apex-charts crypto-widget" data-colors='["--vz-danger", "--vz-transparent"]' id="neo_sparkline_charts" dir="ltr"></div>
-                                                    </div><!-- end col -->
-                                                </div><!-- end row -->
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end -->
-                                </div><!-- end swiper wrapper -->
-                            </div><!-- end swiper -->
-                        </div><!-- end col -->
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="bg-light rounded-circle avatar-xs fs-5 text-center">
+                                                            <i class="ri-currency-fill align-middle"></i>
+                                                        </span>
+                                                        <h6 class="ms-2 mb-0">Nilai Aset</h6>
+                                                    </div>
+                                                    <div class="row align-items-end g-0">
+                                                        <div class="col-6">
+                                                            <h5 class="mb-1 mt-4">$6,147,957</h5>
+                                                            <p class="text-muted fs-13 fw-medium mb-0">-05.07%<span class="text-muted ms-2 text-uppercase">(neo)</span></p>
+                                                        </div><!-- end col -->
+                                                        <div class="col-6">
+                                                            <div class="apex-charts crypto-widget" data-colors='["--vz-danger", "--vz-transparent"]' id="neo_sparkline_charts" dir="ltr"></div>
+                                                        </div><!-- end col -->
+                                                    </div><!-- end row -->
+                                                </div><!-- end card body -->
+                                            </div><!-- end card -->
+                                        </div><!-- end -->
+                                    </div><!-- end swiper wrapper -->
+                                </div><!-- end swiper -->
+                            </div><!-- end col -->
+                        </div>
                     </div><!-- end row -->
 
                     <div class="row">
